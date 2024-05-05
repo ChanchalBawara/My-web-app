@@ -1,0 +1,224 @@
+/*
+   Here we will do all CSS work 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* user interface for all things or this is our main page of project so you can add CSS about the project */
+
+
+.index-body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 75px auto 75px;
+  grid-template-areas:
+    "hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn sb sb"
+    "ft ft ft ft ft ft ft ft ft";
+  overflow: auto;
+  /* Set your desired background image */
+  background-image: url('New\ Employee\ Onboarding\ \(1\).png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* website title */
+
+.clip {
+  font-weight: 700;
+  height: auto;
+  background-color: hsla(0, 0%, 0%, 0.74);
+  border-radius: 14px;
+  text-transform: uppercase;
+  background-image: url("../images/back2.jpg");  /* here change bg image */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: hsla(0, 0%, 0%, 0.171);
+  margin-top: 5px;
+}
+
+
+.big-letters {
+  font-size: 1.5rem;
+  color:rgb(251, 4, 201);
+  font-weight: 800;
+}
+
+
+.clip {
+  color: rgb(0, 204, 255);
+}
+
+
+
+.el {
+  background-color: rgb(146, 193, 208);
+  color: white;
+  display: grid;
+  place-content: center;
+}
+
+.header {
+  grid-area: hd;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  transform: translateZ(0);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s;
+  grid-area: sb;
+  text-align: center;
+  margin-right: 2px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sidebar:hover {
+  transform: translateZ(10px) scale(1.01);
+}
+
+.main-container {
+  margin-top: 10px;
+  grid-area: mn;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(150px, auto);
+  gap: 1em;
+}
+
+.footer {
+  margin-top: 40px;
+  grid-area: ft;
+  text-align: center;
+  color: rgb(219, 32, 175);
+}
+
+.box {
+  font-size: 2rem;
+}
+
+.box:first-child {
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  display: grid;
+  place-content: center;
+}
+
+.box:nth-child(2) {
+  background-color: rgb(165, 9, 165);
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: rgb(89, 255, 0);
+}
+
+
+/* .right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: rgb(89, 255, 0);
+} */
+
+.right-container {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: rgb(89, 255, 0);
+}
+
+
+.l-item {
+  border: 2px solid rgb(60, 11, 60);
+  width: 80%;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: rgb(255, 106, 0);
+}
+
+
+.ll-item {
+  border: 2px solid rgb(60, 11, 60);
+  width: 80%;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+   color: rgb(205, 102, 243); 
+  /* color: white; */
+}
+
+.style1 {
+  margin-top: 4px;
+  border-top: 2px solid gray;
+}
+
+@media (max-width: 767px) {
+  .col-sm-1:nth-child(2) {
+    display: none;
+  }
+}
+
+.active:active {
+  background-color: red;
+}
+
+.active1 {
+  background-color: lightgreen;
+}
+
+@media (max-width:4000px) {
+  #container1 {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+
+#img {
+  max-width: 100%;
+}
+
+#container2 {
+  padding: 2rem;
+}
+
+/* profile page */
+.pro-container {
+  margin: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+.pro-box {
+  min-width: 300px;
+  text-align: center;
+}
